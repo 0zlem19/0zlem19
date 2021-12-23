@@ -1,19 +1,22 @@
+import java.util.Scanner;
+
 public class Adim17 {
-	public static final int HEIGHT = 7;
-	public static final int SEGMENT = 1;
 
 	public static void main(String[] args) {
-		for (int i = 1; i <= SEGMENT; i++) {
-			for (int line = 1; line <= HEIGHT; line++) {
 
-				for (int space = 1; space <= HEIGHT - line; space++) {
-					System.out.print(" ");
-				}
-				for (int star = 1; star <= 2 * line - 1; star++) {
-					System.out.print("*");
-				}
-				System.out.println();
-			}
+		System.out.println(" Üçgen kenarý kaç yýldýz olsun");
+		Scanner scanner = new Scanner(System.in);
+		int star = scanner.nextInt();
+		String sonuc = "";
+
+		for (int i = 0; i < star; i++) {
+			for (int j = 0; j < star - i; j++)
+				System.out.print(" ");
+
+			sonuc += "* ";
+			System.out.print(sonuc + "\n");
+
 		}
 	}
+
 }
